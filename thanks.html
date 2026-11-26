@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>شكراً لطلبك — أغنيتي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#12101F;color:#F4F1EA;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;font-size:17px;line-height:1.8;padding:24px;box-sizing:border-box}
+.box{max-width:520px;width:100%;text-align:center;padding:40px 28px;border-radius:28px;background:#1C1930;border:1px solid #FFB547}
+h1{font-family:'Readex Pro',sans-serif;font-size:32px;margin:16px 0 8px}
+p{color:#B9B3CC;margin:0 0 24px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;background:#25D366;color:#06210F;font-weight:600;text-decoration:none}
+a.home{display:block;margin-top:16px;color:#FFB547}
+</style>
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+r.src=n;var u=t.getElementsByTagName(s)[0];
+u.parentNode.insertBefore(r,u);})(window,document,
+'https://sc-static.net/scevent.min.js');
+
+snaptr('init', '2c62a328-2f1b-4518-8bf3-0d1da06c42a5', {});
+
+snaptr('track', 'PAGE_VIEW');
+
+</script>
+<!-- End Snap Pixel Code -->
+</head>
+<body>
+<div class="box">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FFB547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="16 9 10.5 15 8 12.5"/></svg>
+<h1>تم الدفع بنجاح</h1>
+<p>شكراً لك! بدأنا العمل على أغنيتك، وستصلك على واتساب خلال المدة المحددة لباقتك.</p>
+<a class="btn" href="https://wa.me/12167701496?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%AF%D9%81%D8%B9%D8%AA%20%D8%B7%D9%84%D8%A8%20%D8%A3%D8%BA%D9%86%D9%8A%D8%AA%D9%8A" target="_blank" rel="noopener">تواصل معنا على واتساب</a>
+<a class="home" href="index.html">العودة إلى الصفحة الرئيسية</a>
+</div>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var v = parseFloat(q.get('v')) || 0;
+  var id = q.get('session_id') || '';
+  var key = 'purchase_' + (id || v);
+  try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); } catch (e) {}
+  if (window.snaptr && v) {
+    snaptr('track', 'PURCHASE', { price: v, currency: 'SAR', transaction_id: id, number_items: 1 });
+  }
+})();
+</script>
+</body>
+</html>

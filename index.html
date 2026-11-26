@@ -92,6 +92,21 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
 [hidden]{display:none!important}
 @media (max-width:600px){.sec{padding:64px 0}.sec h2{font-size:30px}.navlinks a.l{display:none}.hero{padding-top:48px}.wa span{display:none}.wa{padding:0 16px}}
 </style>
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+r.src=n;var u=t.getElementsByTagName(s)[0];
+u.parentNode.insertBefore(r,u);})(window,document,
+'https://sc-static.net/scevent.min.js');
+
+snaptr('init', '2c62a328-2f1b-4518-8bf3-0d1da06c42a5', {});
+
+snaptr('track', 'PAGE_VIEW');
+
+</script>
+<!-- End Snap Pixel Code -->
 </head>
 <body>
 
@@ -321,6 +336,7 @@ $('#orderForm').addEventListener('submit', function(e){
     package:PACKAGES[state.pkg].name, price:PACKAGES[state.pkg].value, whatsapp:wa, email:email, at:new Date().toISOString()};
   if(CONFIG.orderEndpoint && !f.company.value){ try{ fetch(CONFIG.orderEndpoint,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify(order)}); }catch(_){} }
   if(window.fbq){ fbq('track','InitiateCheckout',{value:order.price,currency:'SAR'}); }
+  if(window.snaptr){ snaptr('track','START_CHECKOUT',{price:order.price,currency:'SAR',item_ids:[order.package],number_items:1}); }
   $('#sId').textContent = orderId;
   $('#sOcc').textContent = order.occasion;
   $('#sPkg').textContent = order.package;
